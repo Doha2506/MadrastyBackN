@@ -12,7 +12,7 @@ namespace BusinessLogic.Abstractions
     {
         Task<ServiceResponse> Get();
         Task<ServiceResponse> GetById(int ClassId);
-        Task<ServiceResponse> GetClassWithLevelId(int ClassLevel);
+        Task<ServiceResponse> GetClassByLevelId(int ClassLevel);
         Task<ServiceResponse> GetClassCountForTeacher(int EmpId);
         Task<ServiceResponse> Delete(int ClassId);
         Task<ServiceResponse> Save(ClassViewModel Class);

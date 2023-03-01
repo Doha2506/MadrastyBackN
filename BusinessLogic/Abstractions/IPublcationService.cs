@@ -15,5 +15,6 @@ namespace BusinessLogic.Abstractions
         Task<ServiceResponse> Delete(int id);
         Task<ServiceResponse> Save(PublicationViewModel publication);
         Task<ServiceResponse> Update(PublicationViewModel publication);
-        
+
     }
+}
