@@ -1,0 +1,7 @@
+
+.vs
+API/obj
+API/bin
+BusinessLogic/obj
+BusinessLogic/bin
+/API/obj/Debug/net6.0/API.csproj.AssemblyReference.cache
