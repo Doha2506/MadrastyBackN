@@ -30,9 +30,9 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetClassWithLevelId(int id)
+        public async Task<IActionResult> GetClassByLevelId(int id)
         {
-            return Ok(await _service.GetClassWithLevelId(id));
+            return Ok(await _service.GetClassByLevelId(id));
         }
 
         [HttpGet]

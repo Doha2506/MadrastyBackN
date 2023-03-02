@@ -24,20 +24,16 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetByEmployeeId(int employeeId)
-        {
-            return Ok(await _service.GetByEmployeeId(employeeId));
-        }
-        [HttpGet]
-        public async Task<IActionResult> GetBySubjectId(int employeeId, string route)
-        {
-            return Ok(await _service.GetMenusRouteFromEmployeePriviligeByRoute(employeeId,route));
-        }
-        [HttpGet]
-        public async Task<IActionResult> GetBySubjectIdAndValidation(int employeeId )
+        public async Task<IActionResult> GetMenusRoutesFromEmployeePrivilige(int employeeId)
         {
             return Ok(await _service.GetMenusRoutesFromEmployeePrivilige(employeeId));
         }
+        [HttpGet]
+        public async Task<IActionResult> GetMenusRouteFromEmployeePriviligeByRoute(int employeeId, string route)
+        {
+            return Ok(await _service.GetMenusRouteFromEmployeePriviligeByRoute(employeeId,route));
+        }
+       
 
 
         [HttpGet("{id}")]
@@ -70,6 +66,11 @@ namespace API.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             return Ok(await _service.Delete(id));
+        }
+        [HttpDelete]
+        public async Task<IActionResult> DeleteByEmployeeId(int employeeId)
+        {
+            return Ok(await _service.DeleteByEmployeeId(employeeId));
         }
     }
 }
