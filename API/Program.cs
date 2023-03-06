@@ -18,7 +18,10 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IDatabaseContext, DatabaseContext>();
 builder.Services.AddScoped<IDepartmanetService, DepartmentService>();
-
+builder.Services.AddScoped<IPhaseService, PhaseService>();
+builder.Services.AddScoped<IClassService, ClassService>();
+builder.Services.AddScoped<IVisitTypeService, VisitTypeService>();
+builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
